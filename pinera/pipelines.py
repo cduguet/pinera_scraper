@@ -16,8 +16,9 @@ class PineraPipeline(object):
 
 class DownloadPipeline(FilesPipeline):
     def get_media_requests(self, item, info):
-        return [Request(x, meta={'filename': item.get('file_name')}) for x in item.get(self.files_urls_field, [])]
+        # return [Request(x, meta={'filename': item.get('file_name') }) for x in item.get(self.files_urls_field, [])]
 
     def file_path(self, request, response=None, info=None):
+        # return 'files/' + request.meta['filename']
         return 'files/' + urlparse(request.url).path
 
