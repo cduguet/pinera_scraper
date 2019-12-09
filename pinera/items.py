@@ -14,9 +14,6 @@ class PineraItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
-# def remove_extension(value):
-#     return os.path.splitext(value)[0]
-
 class DownloadItem(scrapy.Item):
     name = scrapy.Field()
     file_urls = scrapy.Field()
